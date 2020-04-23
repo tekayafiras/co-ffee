@@ -1,0 +1,207 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    transition: all ease-in 0.25s;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    max-width: 99vw;
+}
+p{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    border: 1px solid;
+    
+}
+.nav-bar{
+    position: absolute;
+    color: white;
+      /*for small devices*/
+}
+.nav-toggle-label{
+    position: absolute;
+    top: 2em;
+    right: .8em;
+    cursor: pointer;
+}
+header{
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    
+}
+header h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+    margin-left: .5em;
+    cursor: pointer;
+
+}
+.work-time{
+    padding: .2em 4em;
+    height: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    display: none;   /* display none for small devices*/
+}
+.work-time p{
+    padding-left: 1.8em;
+}
+.nav{
+    background-color: rgba(0, 0, 0,0.95);
+    opacity: 0;
+    transform: scale(0,1);
+    transform-origin: left;
+    position: absolute;   /*for small devices*/
+    width: 50vw;
+    height: 100%;           /*.*/           /*.*/    
+    top: 0;                 /*.*/
+    left: -0.7em;   
+            /*.*/
+    
+}
+
+.nav li{
+    list-style: none;
+    font-size: 1.2em;
+    line-height: 3em;        /*.*/
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;     /*.*/
+}
+.nav a:hover{
+    color: #6c452c;
+    
+}
+.nav-toggle{
+    display: none;
+}
+.nav-toggle:checked ~ .nav{
+    opacity: 1;
+    transform: scale(1,1);
+    
+}
+
+.home{
+    background: url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;   /*provisoire*/
+}
+
+
+.home-text{
+    padding-left: 2em;
+    padding-top: 12em;
+    color: white;
+    
+}
+.home-text p{
+    font-weight: 550;
+}
+.home-text h1{
+    font-size: 2.3em;
+    padding: 0em;
+}
+.home-text p{
+    font-size: 1.2em;
+}
+.btn{
+    padding: 1em 1.5em;
+    color: black;
+    text-decoration: none;
+    background: white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 700;
+    border-radius: 8%;
+    
+}
+.home-text a{
+    display: block;
+    margin: auto;
+    width: 200px;
+    text-align: center;
+    
+    
+}
+.btn:hover{
+    color: white;
+    background: transparent;
+    border: 1px white solid;
+    position: relative;
+}
+
+
+@media(max-width:950px){
+    .nav{
+        height: 100vh; 
+    }
+}
+
+@media (min-width:750px){
+    .home-text{
+        padding-top: 14em;
+    }
+}
+@media (min-width:950px){
+    .nav-toggle-label{
+        display: none;
+    }
+    .btn{
+        text-align: left;
+        cursor: pointer;
+    }
+    .home-text a{
+        all: unset;
+        padding: 1em 1.5em;
+        color: black;
+        text-decoration: none;
+        background: white;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-weight: 700;
+        border-radius: 8%;
+
+    }
+    
+    .nav li{
+        display: inline;
+        padding-left: 1.5em;
+    }
+    .nav a{
+        font-weight: 200;
+        font-size: 0.9em;
+        
+    }
+    .nav{
+        all: unset;
+        position: absolute;
+        top: 1em;
+        width: 90%;
+        text-align: end;
+        
+    }
+    header h1{
+        padding-left: 2em;
+    }
+    .work-time{
+        padding: 0em 4em;
+        height: 40%;
+        display: flex;
+        justify-content: flex-end;
+        width: 80vw;
+        align-items: flex-end;
+    }
+    .home-text{
+        margin-left: 5em;
+    }
+    .home-text h1{
+        margin-bottom: 1.5em;
+        max-width: 45%;
+        font-size: 3.5em;
+    }
+}
